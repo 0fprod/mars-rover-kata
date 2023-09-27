@@ -22,7 +22,7 @@ public class UnitTest1
         var initialPosition = new Position(0, 0);
         var robot = new Robot(initialPosition, Direction.North);
         
-        robot.Execute(new []{"f"});
+        robot.Execute("f");
         
         robot.Position.X.Should().Be(0);
         robot.Position.Y.Should().Be(1);
@@ -34,7 +34,7 @@ public class UnitTest1
         var initialPosition = new Position(0, 1);
         var robot = new Robot(initialPosition, Direction.North);
         
-        robot.Execute(new []{"b"});
+        robot.Execute("b");
         
         robot.Position.X.Should().Be(0);
         robot.Position.Y.Should().Be(0);
@@ -46,7 +46,7 @@ public class UnitTest1
         var initialPosition = new Position(0, 0);
         var robot = new Robot(initialPosition, Direction.North);
         
-        robot.Execute(new []{"l"});
+        robot.Execute("l");
         
         robot.Direction.Should().Be(Direction.West);
         robot.Position.X.Should().Be(0);
@@ -59,7 +59,7 @@ public class UnitTest1
         var initialPosition = new Position(0, 0);
         var robot = new Robot(initialPosition, Direction.North);
         
-        robot.Execute(new []{"r"});
+        robot.Execute("r");
         
         robot.Direction.Should().Be(Direction.East);
         robot.Position.X.Should().Be(0);
@@ -72,7 +72,7 @@ public class UnitTest1
         var initialPosition = new Position(0, 0);
         var robot = new Robot(initialPosition, Direction.North);
         
-        robot.Execute(new []{"rf"});
+        robot.Execute("rf");
         
         robot.Direction.Should().Be(Direction.East);
         robot.Position.X.Should().Be(1);

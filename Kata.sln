@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kata", "Kata\Kata.csproj", "{C78C4C03-7758-44B4-B94E-F3A824045F43}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatePatternMR", "StatePatternMR\StatePatternMR.csproj", "{D68C37CC-0B17-4ABD-8C52-9E8CB735250A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{C78C4C03-7758-44B4-B94E-F3A824045F43}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C78C4C03-7758-44B4-B94E-F3A824045F43}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C78C4C03-7758-44B4-B94E-F3A824045F43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D68C37CC-0B17-4ABD-8C52-9E8CB735250A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D68C37CC-0B17-4ABD-8C52-9E8CB735250A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D68C37CC-0B17-4ABD-8C52-9E8CB735250A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D68C37CC-0B17-4ABD-8C52-9E8CB735250A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

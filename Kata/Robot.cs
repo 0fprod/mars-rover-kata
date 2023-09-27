@@ -11,23 +11,25 @@ public class Robot
         Direction = direction;
     }
 
-    public void Execute(string[] commands)
+    public void Execute(string commands)
     {
-        var command = Commands.From(commands[0]);
-        switch (command)
+        foreach (var command in commands)
         {
-            case ForwardCommand:
-                MoveForward();
-                break;
-            case BackwardCommand:
-                MoveBackwards();
-                break;
-            case LeftCommand:
-                TurnLeft();
-                break;
-            default:
-                TurnRight();
-                break;
+            switch (Commands.From(command))
+            {
+                case ForwardCommand:
+                    MoveForward();
+                    break;
+                case BackwardCommand:
+                    MoveBackwards();
+                    break;
+                case LeftCommand:
+                    TurnLeft();
+                    break;
+                default:
+                    TurnRight();
+                    break;
+            }
         }
     }
 
@@ -43,11 +45,25 @@ public class Robot
 
     private void MoveBackwards()
     {
-        Position = new Position(0, 0);
+        Position = Direction switch
+        {
+            Direction.North => new Position(Position.X, Position.Y - 1),
+            Direction.South => new Position(Position.X, Position.Y + 1),
+            Direction.West => new Position(Position.X + 1, Position.Y),
+            Direction.East => new Position(Position.X - 1, Position.Y),
+            _ => Position
+        };
     }
 
     private void MoveForward()
     {
-        Position = new Position(0, 1);
+        Position = Direction switch
+        {
+            Direction.North => new Position(Position.X, Position.Y + 1),
+            Direction.South => new Position(Position.X, Position.Y - 1),
+            Direction.West => new Position(Position.X - 1, Position.Y),
+            Direction.East => new Position(Position.X + 1, Position.Y),
+            _ => Position
+        };
     }
 }
