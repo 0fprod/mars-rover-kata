@@ -4,6 +4,9 @@ namespace SPV2;
 
 public class RobotShould
 {
+    // POSICION X e Y
+    // Direccion: Norte, Sur, Este, Oeste
+    // Instrucciones: A(vanzar), R(etroceder), I(zquierda), D(erecha)
     // Asumimos que el mapa es 1 x 2 
     // [0,1] 
     // [0,0] 
