@@ -78,8 +78,6 @@ public class Posicion
     {
         return HashCode.Combine(X, Y);
     }
-
-    
 }
 
 public interface Direccion
